@@ -257,6 +257,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const toggleMenu = (open) => {
         const isOpen = open !== undefined ? open : !navMenu.classList.contains('open');
         mobileToggle.classList.toggle('active', isOpen);
+        mobileToggle.setAttribute('aria-expanded', isOpen);
         navMenu.classList.toggle('open', isOpen);
         document.body.style.overflow = isOpen ? 'hidden' : '';
       };
